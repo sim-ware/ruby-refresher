@@ -91,6 +91,7 @@ end
 # add up all the numbers in an array, so [1, 3, 5, 6]
 # returns 15
 def total_of_array(array)
+  array.inject(0){|sum,x| sum + x }
 end
 
 # turn an array into itself repeated twice. So [1, 2, 3]
@@ -100,11 +101,13 @@ end
 
 # convert a symbol into a string
 def turn_symbol_into_string(symbol)
+  "#{symbol}"
 end
 
 # get the average from an array, rounded to the nearest integer
 # so [10, 15, 25] should return 17
 def average_of_array(array)
+  # array.inject{ |sum, el| sum + el } / array.size
 end
 
 # get all the elements in an array, up until the first element
@@ -118,6 +121,7 @@ end
 # pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
+  # array.to_h
 end
 
 # get all the letters used in an array of words and return
@@ -147,6 +151,7 @@ end
 # round up a float up and convert it to an Integer,
 # so 3.214 becomes 4
 def round_up_number(float)
+  (float.to_f).ceil
 end
 
 # round down a float up and convert it to an Integer,
