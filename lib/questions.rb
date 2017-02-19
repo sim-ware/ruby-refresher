@@ -210,8 +210,6 @@ end
 def titleize_a_string(string)
   nocaps = "and", "the"
   string.split(" ").map { |word| nocaps.include?(word) ? word : word.capitalize }.join(" ")
-  string[0].capitalize
-  string
 end
 
 # return true if a string contains any special characters
